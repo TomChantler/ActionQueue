@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomSSL.Utilities.Queuing", "TomSSL.Utilities.Queuing\TomSSL.Utilities.Queuing.csproj", "{4852C5F6-61CE-4737-9FEB-CF6E0CF93ABB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomSSL.Utilities.Queuing.Tests", "TomSSL.Utilities.Queuing.Tests\TomSSL.Utilities.Queuing.Tests.csproj", "{230B4F90-2686-4011-B355-C7FB10BE664A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4852C5F6-61CE-4737-9FEB-CF6E0CF93ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4852C5F6-61CE-4737-9FEB-CF6E0CF93ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4852C5F6-61CE-4737-9FEB-CF6E0CF93ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230B4F90-2686-4011-B355-C7FB10BE664A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230B4F90-2686-4011-B355-C7FB10BE664A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230B4F90-2686-4011-B355-C7FB10BE664A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230B4F90-2686-4011-B355-C7FB10BE664A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
