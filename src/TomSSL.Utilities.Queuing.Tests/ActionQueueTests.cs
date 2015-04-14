@@ -13,6 +13,7 @@ namespace TomSSL.Utilities.Queuing.Tests
         public void CanProcessQueue()
         {
             var total = 0;
+            ActionQueue<int>.Clear();
 
             // Start processing queue
             var task = ActionQueue<int>.Consume(x => total += x);
@@ -36,6 +37,7 @@ namespace TomSSL.Utilities.Queuing.Tests
             var dequeuedCount = random.Next(1, max - 1);
             var value = 0;
             var remainder = 0;
+            ActionQueue<int>.Clear();
 
             // Add random number of items to queue.
             Enumerable.Range(1, max).ToList().ForEach(ActionQueue<int>.Enqueue);
@@ -59,7 +61,6 @@ namespace TomSSL.Utilities.Queuing.Tests
         public void CanCancel()
         {
             var arr = new List<int>();
-
             ActionQueue<int>.Clear();
 
             // Start processing queue at the rate of one item every 11ms.
@@ -70,7 +71,7 @@ namespace TomSSL.Utilities.Queuing.Tests
             });
 
             // Arrange to stop processing the queue in 0.1 sec
-            ActionQueue<int>.Cancel(100);
+            ActionQueue<int>.Cancel(95);
 
             // Add ten items to queue.
             Enumerable.Range(0, 10).ToList().ForEach(ActionQueue<int>.Enqueue);
@@ -90,7 +91,6 @@ namespace TomSSL.Utilities.Queuing.Tests
         public void CanCancelWithTimestampedConsume()
         {
             var arr = new List<Timestamped<int>>();
-
             ActionQueue<int>.Clear();
 
             // Start processing queue at the rate of one item every 11ms.
@@ -101,7 +101,7 @@ namespace TomSSL.Utilities.Queuing.Tests
             });
 
             // Arrange to stop processing the queue in 0.1 sec
-            ActionQueue<int>.Cancel(100);
+            ActionQueue<int>.Cancel(95);
 
             // Add ten items.
             Enumerable.Range(0, 10).ToList().ForEach(ActionQueue<int>.Enqueue);
@@ -121,7 +121,6 @@ namespace TomSSL.Utilities.Queuing.Tests
         public void CanGetLatency()
         {
             var arr = new List<int>();
-
             ActionQueue<int>.Clear();
 
             // Start processing queue at the rate of one item every 11ms.
@@ -132,7 +131,7 @@ namespace TomSSL.Utilities.Queuing.Tests
             });
 
             // Arrange to stop processing the queue in 0.1 sec
-            ActionQueue<int>.Cancel(100);
+            ActionQueue<int>.Cancel(95);
 
             // Add ten items.
             Enumerable.Range(0, 10).ToList().ForEach(ActionQueue<int>.Enqueue);
